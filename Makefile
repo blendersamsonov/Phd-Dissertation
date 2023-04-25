@@ -8,11 +8,11 @@ endif
 
 # platform specific settings
 # include before variable definitions
-ifeq ($(OS),Windows_NT)
-	include windows.mk
-else
-	include unix.mk
-endif
+# ifeq ($(OS),Windows_NT)
+# 	include windows.mk
+# else
+# 	include unix.mk
+# endif
 
 # Ghostscript-based pdf postprocessing
 include compress.mk
