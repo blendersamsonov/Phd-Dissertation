@@ -14,7 +14,8 @@ autolang=other,% многоязычная библиография
 clearlang=true,% внутренний сброс поля language, если он совпадает с языком из babel/polyglossia
 defernumbers=true,% нумерация проставляется после двух компиляций, зато позволяет выцеплять библиографию по ключевым словам и нумеровать не из большего списка
 sortcites=true,% сортировать номера затекстовых ссылок при цитировании (если в квадратных скобках несколько ссылок, то отображаться будут отсортированно, а не абы как)
-doi=false,% Показывать или нет ссылки на DOI
+doi=true,% Показывать или нет ссылки на DOI
+hyperref=true,
 isbn=false,% Показывать или нет ISBN, ISSN, ISRN
 ]{biblatex}[2016/09/17]
 \ltx@iffilelater{biblatex-gost.def}{2017/05/03}%
@@ -129,7 +130,10 @@ sorting=none,% настройка сортировки списка литера
 %%% Подключение файлов bib %%%
 \addbibresource[label=bl-external]{biblio/external.bib}
 \addbibresource[label=bl-author]{biblio/author.bib}
-\addbibresource[label=bl-registered]{biblio/registered.bib}
+
+% \addbibresource{biblio/external.bib}
+% \addbibresource{biblio/author.bib}
+% \addbibresource[label=bl-registered]{biblio/registered.bib}
 
 %http://tex.stackexchange.com/a/141831/79756
 %There is a way to automatically map the language field to the langid field. The following lines in the preamble should be enough to do that.
@@ -208,14 +212,14 @@ sorting=none,% настройка сортировки списка литера
             \step[fieldsource=authorother,final=true]
             \step[fieldset=keywords,fieldvalue={,biblioauthorother},append=true]
         }
-        \map[overwrite]{ % записываем информацию о типе публикации в ключевые слова
-            \step[fieldsource=authorpatent,final=true]
-            \step[fieldset=keywords,fieldvalue={,biblioauthorpatent},append=true]
-        }
-        \map[overwrite]{ % записываем информацию о типе публикации в ключевые слова
-            \step[fieldsource=authorprogram,final=true]
-            \step[fieldset=keywords,fieldvalue={,biblioauthorprogram},append=true]
-        }
+        % \map[overwrite]{ % записываем информацию о типе публикации в ключевые слова
+        %     \step[fieldsource=authorpatent,final=true]
+        %     \step[fieldset=keywords,fieldvalue={,biblioauthorpatent},append=true]
+        % }
+        % \map[overwrite]{ % записываем информацию о типе публикации в ключевые слова
+        %     \step[fieldsource=authorprogram,final=true]
+        %     \step[fieldset=keywords,fieldvalue={,biblioauthorprogram},append=true]
+        % }
         \map[overwrite]{ % добавляем ключевые слова, чтобы различать источники
             \perdatasource{biblio/external.bib}
             \step[fieldset=keywords, fieldvalue={,biblioexternal},append=true]
@@ -224,10 +228,10 @@ sorting=none,% настройка сортировки списка литера
             \perdatasource{biblio/author.bib}
             \step[fieldset=keywords, fieldvalue={,biblioauthor},append=true]
         }
-        \map[overwrite]{ % добавляем ключевые слова, чтобы различать источники
-            \perdatasource{biblio/registered.bib}
-            \step[fieldset=keywords, fieldvalue={,biblioregistered},append=true]
-        }
+        % \map[overwrite]{ % добавляем ключевые слова, чтобы различать источники
+        %     \perdatasource{biblio/registered.bib}
+        %     \step[fieldset=keywords, fieldvalue={,biblioregistered},append=true]
+        % }
         \map[overwrite]{ % добавляем ключевые слова, чтобы различать источники
             \step[fieldset=keywords, fieldvalue={,bibliofull},append=true]
         }
@@ -534,23 +538,23 @@ sorting=none,% настройка сортировки списка литера
         {}
         {\stepcounter{citeauthorscopuswos}}
 
-    \newtotcounter{citeregistered}
-    \defbibenvironment{countregistered}
-        {\setcounter{citeregistered}{0}\renewcommand{\blx@driver}[1]{}}
-        {}
-        {\stepcounter{citeregistered}}
+    % \newtotcounter{citeregistered}
+    % \defbibenvironment{countregistered}
+    %     {\setcounter{citeregistered}{0}\renewcommand{\blx@driver}[1]{}}
+    %     {}
+    %     {\stepcounter{citeregistered}}
 
-    \newtotcounter{citeauthorpatent}
-    \defbibenvironment{countauthorpatent}
-        {\setcounter{citeauthorpatent}{0}\renewcommand{\blx@driver}[1]{}}
-        {}
-        {\stepcounter{citeauthorpatent}}
+    % \newtotcounter{citeauthorpatent}
+    % \defbibenvironment{countauthorpatent}
+    %     {\setcounter{citeauthorpatent}{0}\renewcommand{\blx@driver}[1]{}}
+    %     {}
+    %     {\stepcounter{citeauthorpatent}}
 
-    \newtotcounter{citeauthorprogram}
-    \defbibenvironment{countauthorprogram}
-        {\setcounter{citeauthorprogram}{0}\renewcommand{\blx@driver}[1]{}}
-        {}
-        {\stepcounter{citeauthorprogram}}
+    % \newtotcounter{citeauthorprogram}
+    % \defbibenvironment{countauthorprogram}
+    %     {\setcounter{citeauthorprogram}{0}\renewcommand{\blx@driver}[1]{}}
+    %     {}
+    %     {\stepcounter{citeauthorprogram}}
 
     \newtotcounter{citeexternal}
     \defbibenvironment{countexternal}
@@ -600,14 +604,68 @@ sorting=none,% настройка сортировки списка литера
 
 %%% Создание команд для вывода списка литературы %%%
 \newcommand*{\insertbibliofull}{
-    \printbibliography[keyword=bibliofull,section=0,title=\bibtitlefull]
+    \printbibliography[keyword=bibliofull,env=counter,section=0,title=\bibtitlefull]
     \ifnumequal{\value{draft}}{0}{
       \printbibliography[heading=nobibheading,env=counter,keyword=bibliofull,section=0]
     }{}
 }
 \newcommand*{\insertbiblioauthor}{
-    \printbibliography[heading=pubgroup, section=0, filter=papersregistered, title=\bibtitleauthor]
+    % \printbibliography[heading=pubgroup, section=0, filter=papersregistered, title=\bibtitleauthor]    
+    % \printbibliography[prefixnumbers=A, heading=pubgroup, section=0, filter=papersregistered, title=\bibtitleauthor]
+
+    % \printbibliography[keyword=biblioauthor,section=1,title=\bibtitleauthor]
+
+    % \printbibliography[keyword=biblioauthor,section=1,title=\bibtitleauthor]
+    % \printbibliography[heading=nobibheading, keyword=biblioauthor,section=1]
+
+    % \begin{refsection}[bl-author]
+    % \end{refsection}
+        
+    % \begin{refcontext}[labelprefix=A]
+    %     \printbibliography[keyword=biblioauthor,section=1,title=\bibtitleauthor]
+        
+    %     % Невидимый библиографический список для подсчёта количества публикаций:
+    %     \printbibliography[heading=nobibheading, section=1, env=countauthorvak,          keyword=biblioauthorvak]%
+    %     \printbibliography[heading=nobibheading, section=1, env=countauthorwos,          keyword=biblioauthorwos]%
+    %     \printbibliography[heading=nobibheading, section=1, env=countauthorscopus,       keyword=biblioauthorscopus]%
+    %     \printbibliography[heading=nobibheading, section=1, env=countauthorconf,         keyword=biblioauthorconf]%
+    %     \printbibliography[heading=nobibheading, section=1, env=countauthorother,        keyword=biblioauthorother]%
+    %     \printbibliography[heading=nobibheading, section=1, env=countauthor,             keyword=biblioauthor]%
+    %     \printbibliography[heading=nobibheading, section=1, env=countauthorvakscopuswos, filter=vakscopuswos]%
+    %     \printbibliography[heading=nobibheading, section=1, env=countauthorscopuswos,    filter=scopuswos]%
+    % \end{refcontext}
+
+    \begin{refcontext}[labelprefix=A]
+        \printbibliography[keyword=biblioauthor, title=\bibtitleauthor]
+        
+        % Невидимый библиографический список для подсчёта количества публикаций:
+        \printbibliography[heading=nobibheading, env=countauthorvak,          keyword=biblioauthorvak]%
+        \printbibliography[heading=nobibheading, env=countauthorwos,          keyword=biblioauthorwos]%
+        \printbibliography[heading=nobibheading, env=countauthorscopus,       keyword=biblioauthorscopus]%
+        \printbibliography[heading=nobibheading, env=countauthorconf,         keyword=biblioauthorconf]%
+        \printbibliography[heading=nobibheading, env=countauthorother,        keyword=biblioauthorother]%
+        \printbibliography[heading=nobibheading, env=countauthor,             keyword=biblioauthor]%
+        \printbibliography[heading=nobibheading, env=countauthorvakscopuswos, filter=vakscopuswos]%
+        \printbibliography[heading=nobibheading, env=countauthorscopuswos,    filter=scopuswos]%
+    \end{refcontext}
+        
+
+    % \printbibliography[prefixnumbers=A,heading=pubgroup,keyword=biblioauthor,section=1,title=\authorbibtitle]
+    % \printbibliography[prefixnumbers=A,heading=nobibheading,env=counter,keyword=biblioauthor,section=1]
 }
+
+\newcommand*{\insertbiblioexternal}{
+    % \printbibliography[heading=pubgroup,    section=0, keyword=biblioexternal,     title=\bibtitlefull]    
+    \printbibliography[keyword=biblioexternal,section=0,title=\bibtitlefull]
+    % \printbibliography[heading=pubgroup,    section=0, keyword=biblioexternal,     title=\bibtitlefull]
+
+
+    % \printbibliography[keyword=bibliofull,section=0,title=\bibtitlefull]
+    \printbibliography[heading=nobibheading,env=counter,keyword=biblioexternal,section=0]
+
+}
+
+
 \newcommand*{\insertbiblioauthorimportant}{
     \printbibliography[heading=pubgroup, section=2, filter=papersregistered, title=\bibtitleauthorimportant]
 }
@@ -623,12 +681,10 @@ sorting=none,% настройка сортировки списка литера
     \fi
     \printbibliography[heading=pubsubgroup, section=0, keyword=biblioauthorwos,    title=\bibtitleauthorwos,resetnumbers=false]% Работы автора, индексируемые Web of Science
     \printbibliography[heading=pubsubgroup, section=0, keyword=biblioauthorscopus, title=\bibtitleauthorscopus,resetnumbers=false]% Работы автора, индексируемые Scopus
-    \printbibliography[heading=pubsubgroup, section=0, keyword=biblioauthorpatent, title=\bibtitleauthorpatent,resetnumbers=false]% Патенты
-    \printbibliography[heading=pubsubgroup, section=0, keyword=biblioauthorprogram,title=\bibtitleauthorprogram,resetnumbers=false]% Программы для ЭВМ
+    % \printbibliography[heading=pubsubgroup, section=0, keyword=biblioauthorpatent, title=\bibtitleauthorpatent,resetnumbers=false]% Патенты
+    % \printbibliography[heading=pubsubgroup, section=0, keyword=biblioauthorprogram,title=\bibtitleauthorprogram,resetnumbers=false]% Программы для ЭВМ
     \printbibliography[heading=pubsubgroup, section=0, keyword=biblioauthorconf,   title=\bibtitleauthorconf,resetnumbers=false]% Тезисы конференций
     \printbibliography[heading=pubsubgroup, section=0, keyword=biblioauthorother,  title=\bibtitleauthorother,resetnumbers=false]% Прочие работы автора
 }
 
-\newcommand*{\insertbiblioexternal}{
-    \printbibliography[heading=pubgroup,    section=0, keyword=biblioexternal,     title=\bibtitlefull]
-}
+

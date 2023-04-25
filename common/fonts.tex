@@ -14,13 +14,45 @@
     }{}
 
     \ifnumequal{\value{fontfamily}}{0}{                    % Семейство шрифтов CMU. Используется как fallback
-        \setmonofont{CMU Typewriter Text}                  % моноширинный шрифт
-        \newfontfamily\cyrillicfonttt{CMU Typewriter Text} % моноширинный шрифт для кириллицы
+        % \setmonofont{CMU Typewriter Text}                  % моноширинный шрифт
+        % \newfontfamily\cyrillicfonttt{CMU Typewriter Text} % моноширинный шрифт для кириллицы
+        \newfontfamily\cyrillicfonttt{STIX2Text}[
+            Extension={.otf},
+            Path=STIX2fonts/,
+            UprightFont={*-Regular},
+            BoldFont={*-Bold},
+            ItalicFont={*-Italic},
+            BoldItalicFont={*-BoldItalic}]
         \defaultfontfeatures{Ligatures=TeX}                % стандартные лигатуры TeX, замены нескольких дефисов на тире и т. п. Настройки моноширинного шрифта должны идти до этой строки, чтобы при врезках кода программ в коде не применялись лигатуры и замены дефисов
-        \setmainfont{CMU Serif}                            % Шрифт с засечками
-        \newfontfamily\cyrillicfont{CMU Serif}             % Шрифт с засечками для кириллицы
-        \setsansfont{CMU Sans Serif}                       % Шрифт без засечек
-        \newfontfamily\cyrillicfontsf{CMU Sans Serif}      % Шрифт без засечек для кириллицы
+        % \setmainfont{CMU Serif}                            % Шрифт с засечками
+        \setmainfont{STIX2Text}[
+            Extension={.otf},
+            Path=STIX2fonts/,
+            UprightFont={*-Regular},
+            BoldFont={*-Bold},
+            ItalicFont={*-Italic},
+            BoldItalicFont={*-BoldItalic}]
+        % \newfontfamily\cyrillicfont{CMU Serif}             % Шрифт с засечками для кириллицы
+        \newfontfamily\cyrillicfont{STIX2Text}[
+            Extension={.otf},
+            Path=STIX2fonts/,
+            UprightFont={*-Regular},
+            BoldFont={*-Bold},
+            ItalicFont={*-Italic},
+            BoldItalicFont={*-BoldItalic}]
+        \newfontfamily\cyrillicfontsf{STIX2Text}[
+            Extension={.otf},
+            Path=STIX2fonts/,
+            UprightFont={*-Regular},
+            BoldFont={*-Bold},
+            ItalicFont={*-Italic},
+            BoldItalicFont={*-BoldItalic}]
+        % \setsansfont{CMU Sans Serif}                       % Шрифт без засечек
+        % \newfontfamily\cyrillicfontsf{CMU Sans Serif}      % Шрифт без засечек для кириллицы
+        \setmathfont{STIX2Math}[
+            Extension={.otf},
+            Path=STIX2fonts/,
+            Scale=1]
     }
 
     \ifnumequal{\value{fontfamily}}{1}{                    % Семейство MS шрифтов

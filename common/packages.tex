@@ -15,6 +15,11 @@
 \usepackage{etoolbox}[2015/08/02]   % Для продвинутой проверки разных условий
 \providebool{presentation}
 
+\usepackage{titlesec}
+% Define paragraph style
+\titleformat{\paragraph}
+{\normalfont\normalsize\bfseries\filcenter}{\theparagraph}{1em}{}
+
 \usepackage{comment}    % Позволяет убирать блоки текста (добавляет
                         % окружение comment и команду \excludecomment)
 
@@ -26,6 +31,12 @@
 \usepackage{amsthm,amsmath,amscd}   % Математические дополнения от AMS
 \usepackage{amsfonts,amssymb}       % Математические дополнения от AMS
 \usepackage{physics}
+\usepackage{tocloft}
+% \usepackage{pscyr}
+% \usepackage{stix}
+% \usepackage{fontspec}
+\usepackage{unicode-math}
+\usepackage{cancel}
 \usepackage{mathtools}              % Добавляет окружение multlined
 \usepackage{xfrac}                  % Красивые дроби
 \usepackage[
@@ -36,6 +47,7 @@
     list-units           = single,
     range-units          = single,
     range-phrase={\text{\ensuremath{-}}},
+    output-decimal-marker = {.},
     % quotient-mode        = fraction, % красивые дроби могут не соответствовать ГОСТ
     fraction-function    = \sfrac,
     separate-uncertainty,
@@ -87,6 +99,7 @@
     \ifnumequal{\value{usealtfont}}{1}{% Используется pscyr, при наличии
         \IfFileExists{pscyr.sty}{\usepackage{pscyr}}{}  % Подключение pscyr
     }{}
+    % \usepackage{pscyr}
     \usepackage[utf8]{inputenc}[2014/04/30]         % Кодировка utf8
     \usepackage[english, russian]{babel}[2014/03/24]% Языки: русский, английский
     \makeatletter\AtBeginDocument{\let\@elt\relax}\makeatother % babel 3.40 fix
@@ -134,7 +147,7 @@
 
 %%% Общее форматирование
 \usepackage{soulutf8}% Поддержка переносоустойчивых подчёркиваний и зачёркиваний
-\usepackage{icomma}  % Запятая в десятичных дробях
+%\usepackage{icomma}  % Запятая в десятичных дробях
 
 %%% Оптимизация расстановки переносов и длины последней строки абзаца
 \IfFileExists{impnattypo.sty}{% проверка установленности пакета impnattypo
