@@ -37,25 +37,25 @@
 
 \underline{\textbf{Первая глава}} посвящена \dots
 
-картинку можно добавить так:
-\begin{figure}[ht]
-    \centerfloat{
-        \hfill
-        \subcaptionbox{\LaTeX}{%
-            \includegraphics[scale=0.27]{latex}}
-        \hfill
-        \subcaptionbox{Knuth}{%
-            \includegraphics[width=0.25\linewidth]{knuth1}}
-        \hfill
-    }
-    \caption{Подпись к картинке.}\label{fig:latex}
-\end{figure}
+% картинку можно добавить так:
+% \begin{figure}[ht]
+%     \centerfloat{
+%         \hfill
+%         \subcaptionbox{\LaTeX}{%
+%             \includegraphics[scale=0.27]{latex}}
+%         \hfill
+%         \subcaptionbox{Knuth}{%
+%             \includegraphics[width=0.25\linewidth]{knuth1}}
+%         \hfill
+%     }
+%     \caption{Подпись к картинке.}\label{fig:latex}
+% \end{figure}
 
-Формулы в строку без номера добавляются так:
-\[
-    \lambda_{T_s} = K_x\frac{d{x}}{d{T_s}}, \qquad
-    \lambda_{q_s} = K_x\frac{d{x}}{d{q_s}},
-\]
+% Формулы в строку без номера добавляются так:
+% \[
+%     \lambda_{T_s} = K_x\frac{d{x}}{d{T_s}}, \qquad
+%     \lambda_{q_s} = K_x\frac{d{x}}{d{q_s}},
+% \]
 
 \underline{\textbf{Вторая глава}} посвящена исследованию
 
@@ -103,12 +103,6 @@
     %% authorscopus
     \nocite{scbib1}%
     %
-    %% authorpathent
-    \nocite{patbib1}%
-    %
-    %% authorprogram
-    \nocite{progbib1}%
-    %
     %% authorconf
     \nocite{confbib1}%
     \nocite{confbib2}%
@@ -117,39 +111,42 @@
     \nocite{bib1}%
     \nocite{bib2}%
 
-    \ifnumgreater{\value{usefootcite}}{0}{
-        \begin{refcontext}[labelprefix={}]
-            \ifnum \value{bibgrouped}>0
-                \insertbiblioauthorgrouped    % Вывод всех работ автора, сгруппированных по источникам
-            \else
-                \insertbiblioauthor      % Вывод всех работ автора
-            \fi
-        \end{refcontext}
-    }{
-        \ifnum \totvalue{citeexternal}>0
-            \begin{refcontext}[labelprefix=A]
-                \ifnum \value{bibgrouped}>0
-                    \insertbiblioauthorgrouped    % Вывод всех работ автора, сгруппированных по источникам
-                \else
-                    \insertbiblioauthor      % Вывод всех работ автора
-                \fi
-            \end{refcontext}
-        \else
-            \ifnum \value{bibgrouped}>0
-                \insertbiblioauthorgrouped    % Вывод всех работ автора, сгруппированных по источникам
-            \else
-                \insertbiblioauthor      % Вывод всех работ автора
-            \fi
-        \fi
-        %  \insertbiblioauthorimportant  % Вывод наиболее значимых работ автора (определяется в файле characteristic во второй section)
-        \begin{refcontext}[labelprefix={}]
-            \insertbiblioexternal            % Вывод списка литературы, на которую ссылались в тексте автореферата
-        \end{refcontext}
-        % Невидимый библиографический список для подсчёта количества внешних публикаций
-        % Используется, чтобы убрать приставку "А" у работ автора, если в автореферате нет
-        % цитирований внешних источников.
-        \printbibliography[heading=nobibheading, section=0, env=countexternal, keyword=biblioexternal, resetnumbers=true]%
-    }
+    \insertbiblioexternal
+    \insertbiblioauthor
+
+    % \ifnumgreater{\value{usefootcite}}{0}{
+    %     \begin{refcontext}[labelprefix={}]
+    %         \ifnum \value{bibgrouped}>0
+    %             \insertbiblioauthorgrouped    % Вывод всех работ автора, сгруппированных по источникам
+    %         \else
+    %             \insertbiblioauthor      % Вывод всех работ автора
+    %         \fi
+    %     \end{refcontext}
+    % }{
+    %     \ifnum \totvalue{citeexternal}>0
+    %         \begin{refcontext}[labelprefix=A]
+    %             \ifnum \value{bibgrouped}>0
+    %                 \insertbiblioauthorgrouped    % Вывод всех работ автора, сгруппированных по источникам
+    %             \else
+    %                 \insertbiblioauthor      % Вывод всех работ автора
+    %             \fi
+    %         \end{refcontext}
+    %     \else
+    %         \ifnum \value{bibgrouped}>0
+    %             \insertbiblioauthorgrouped    % Вывод всех работ автора, сгруппированных по источникам
+    %         \else
+    %             \insertbiblioauthor      % Вывод всех работ автора
+    %         \fi
+    %     \fi
+    %     %  \insertbiblioauthorimportant  % Вывод наиболее значимых работ автора (определяется в файле characteristic во второй section)
+    %     \begin{refcontext}[labelprefix={}]
+    %         \insertbiblioexternal            % Вывод списка литературы, на которую ссылались в тексте автореферата
+    %     \end{refcontext}
+    %     % Невидимый библиографический список для подсчёта количества внешних публикаций
+    %     % Используется, чтобы убрать приставку "А" у работ автора, если в автореферате нет
+    %     % цитирований внешних источников.
+    %     \printbibliography[heading=nobibheading, section=0, env=countexternal, keyword=biblioexternal, resetnumbers=true]%
+    % }
 }
 \ifdefmacro{\microtypesetup}{\microtypesetup{protrusion=true}}{}
 \urlstyle{tt}                               % возвращаем установки шрифта ссылок URL
