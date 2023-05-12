@@ -50,7 +50,7 @@ PIC моделирование служит отправной точкой бо
 
 Приступим к рассмотрению взаимодействия интенсивного лазерного излучения с закритической плазмой. 
 Б\'{о}льшая часть публикаций, посвящённых развитию самоподдерживающихся КЭД каскадов (каскадов А-типа), рассматривает конфигурацию с несколькими лазерными импульсами, распространяющимися навстречу друг другу и формирующими стоячую волну.
-В строго плоской волне развитие КЭД каскада невозможно, так как параметр $\chi$ для электронов и позитронов в такой конфигурации поля является интегралом движения без учёта реакции излучения (см., например, главу I).
+В строго плоской волне развитие КЭД каскада невозможно, так как параметр $\chi$ для электронов и позитронов в такой конфигурации поля является интегралом движения без учёта реакции излучения (см., например, главу~1).
 Поэтому образование гамма-фотонов и пар возможно лишь до тех пор, пока параметр $\chi$ всех частиц не уменьшится до значений $\lesssim 1$ и вероятности КЭД процессов станут экспоненциально малыми.
 Однако, данные рассуждения не означают невозможности развития самоподдерживающегося КЭД каскада в поле единичного лазерного импульса, т.к., например, в узко-сфокусированном лазерном импульсе конфигурация поля значительно отлична от плоской волны.
 Ниже мы приводим результаты численного моделирования процесса взаимодействия лазерного импульса с конфигурацией поля близкой к плоской волне с тонкой твердотельной мишенью.
@@ -73,12 +73,7 @@ PIC моделирование служит отправной точкой бо
 Была проведена серия численных моделирований с различными параметрами $a_{0}$, $n_{e}$ и $d$, удовлетворяющие при этом соотношению $a_{0}=\eta n_{e}d\lambda r_{e}$, которое необходимо для реализации ускорения ионов в режиме <<светового паруса>> (см. например~\cite{macchi2013ion}).
 Здесь $r_{e}=e^{2}/m_{e}c^{2}$~---~это классический радиус электрона, $\eta$~---~числовой коэффициент порядка единицы (во всех счётах $\eta=1.5$).
 Такие параметры подбираются для оценки влияния КЭД эффектов на ускорение ионов.
-Так как характерные значения $a_0$ в наших счётах составляют порядка $10^3$, то типичное значение концентрации электронов мишени составляет $n_e\sim10^{23}\ \text{см}^{-3}$, что соответствует твёрдому веществу.
-
-% \begin{figure}[h!]
-% 	\center{\includegraphics[width=85mm]{Scheme.pdf} }
-%     \caption{\label{Scheme} (a) Распределение частиц в пространстве (синие~---~ионы, зелёные~---~электроны, красные~---~позитроны) в момент времени $t=22\,\lambda/c$. Голубой контур обозначает частицы мишени, жёлтый~---~частицы электрон-позитронной плазмы. Распределение $y$-компоненты электрического поля отложено в плоскости $xz$, где красный цвет обозначает положительные значения, синий~---~отрицательные.}
-% \end{figure}
+Так как характерные значения $a_0$ в наших моделированиях составляют порядка $10^3$, то характерное значение концентрации электронов мишени составляет $n_e\sim10^{23}\ \text{см}^{-3}$, что соответствует твёрдому веществу.
 
 \begin{figure}[h!]
 	\centerfloat{\includegraphics{cushion-onaxis.pdf}}
@@ -92,8 +87,8 @@ PIC моделирование служит отправной точкой бо
 
 Временная эволюция плотности частиц и электромагнитной энергии представлена на Рис.~\ref{Sim_res} для счёта с параметрами: ${n_{e}=\SI{5.9e23}{\centi\meter^{-3}}\approx530\, n_\mathrm{cr}}$ (${n_\mathrm{cr}=m_{e}\omega_{L}^{2}/4\pi e^{2}\approx\SI{1e21}{\centi\meter^{-3}}}$~---~критическая концентрация), $d=1$~мкм, $a_{0}=2500$. 
 Из анализа результатов численного моделирования следует, что до времени $ct/\lambda\lesssim 8$ мишень сжимается в тонкий слой и ускоряется в продольном направлении до скорости, близкой к скорости света, т.е. происходит типичное ускорение ионов в режиме <<светового паруса>> (см. Рис.~\ref{Sim_en}\;(a)). 
-Число электрон-позитронных пар, образованных в течение этого времени, незначительно. В интервал времени $8~\lesssim~ct/\lambda~\lesssim~14$ начинает формироваться неоднородная электрон-позитронная плазма, которая частично поглощает излучение, что приводит к снижению эффективности ускорения ионов (см. Рис.~\ref{Sim_en}\;(a)).
-В период времени $14~\lesssim~ct/\lambda~\lesssim~28$ КЭД каскад развивается в самоподдерживающемся режиме, т.е. без участия частиц начальной затравки. 
+Число электрон-позитронных пар, образованных в течение этого времени, незначительно. В интервал времени $8 \lesssim ct/\lambda \lesssim 14$ начинает формироваться неоднородная электрон-позитронная плазма, которая частично поглощает излучение, что приводит к снижению эффективности ускорения ионов (см. Рис.~\ref{Sim_en}\;(a)).
+В период времени $14 \lesssim ct/\lambda \lesssim 28$ КЭД каскад развивается в самоподдерживающемся режиме, т.е. без участия частиц начальной затравки. 
 При этом передний (по отношению к лазерному импульсу) фронт распределения электрон-позитронной пары движется со скоростью $v_\mathrm{fr}$ меньшей, чем скорость света; задний фронт при этом по инерции движется вместе с мишенью практически со световой скоростью. 
 Таким образом электрон-позитронная подушка расширяется навстречу лазерному излучению и в конце концов полностью поглощает его. 
 Такое поведение во многом напоминает распространение фронта ионизации при СВЧ пробое в газе \cite{semenov1982breakdown}.
@@ -120,7 +115,7 @@ PIC моделирование служит отправной точкой бо
 
 \begin{figure}[h!]
 	\center{\includegraphics{cushion-fields-particles.pdf}}
-    \caption[Результаты численного моделирования развития КЭД каскада в плоской волн]{\label{fig:ch2/field-structure} Результаты численного моделирования в момент времени ${t = 20 \lambda / c}$. (а) Распределение амплитуды электрического поля $E$, амплитуды магнитного поля $B$, угла $\varphi$ между ними и концентрации позитронов $N_p$. Распределение (b) позитронов ((с) гамма-квантов) в плоскости $x - v_{x}$ (плотность частиц обозначена цветом), их средние продольная скорость $\overline{v_x}$ (белая штрих-пунктирная линия) и Лоренц-фактор $\overline{\gamma}$ (белая пунктирная линия) как функции $x$. Белой штриховой линией обозначена скорость фронта каскада $v_\mathrm{fr}$ (равная 0.27 в данном моделировании).}
+    \caption[Результаты численного моделирования развития КЭД каскада в плоской волн]{\label{fig:ch2/field-structure} Результаты численного моделирования в момент времени ${t = 20 \lambda / c}$. (а) Распределение амплитуды электрического поля $E$, амплитуды магнитного поля $B$, угла $\varphi$ между ними и концентрации позитронов $N_p$. Распределение (b) позитронов и (с) гамма-квантов в плоскости $x - v_{x}$ (плотность частиц обозначена цветом), их средние продольная скорость $\overline{v_x}$ (белая штрих-пунктирная линия) и Лоренц-фактор $\overline{\gamma}$ (белая пунктирная линия) как функции $x$. Белой штриховой линией обозначена скорость фронта каскада $v_\mathrm{fr}$ (равная 0.27 в данном моделировании).}
 \end{figure}
 
 \begin{figure}[h!]
@@ -245,25 +240,25 @@ PIC моделирование служит отправной точкой бо
 где $D_\alpha$ и $F_\alpha$~---~плотность и поток некоторой физической величины $\alpha$, $S[\alpha,\beta]$~---~источник, приводящий к изменению величины $\alpha$ в результате процесса $\beta$.
 Отметим, что несмотря на то, что мы определили функцию распределения частиц по энергиям, для вычисления источников $S[\alpha,\beta]$ также необходимо знать угловое распределение частиц, которое обсуждается ниже.
 Основываясь на качественном объяснении механизма развития и поддержания КЭД каскада, описанном в подразделе~\ref{sub:ch2/sec2/Mechanism}, мы предполагаем, что следующая система уравнений достаточно полно описывает данный процесс 
-\begin{align}
+\begin{alignat}{3}
     \label{eq:ch2/hd_p1}
-    \frac{\partial }{\partial t}n_p  \quad &\!+\!& &\frac{\partial}{\partial x}\left( v_x n_p \right) \!\!\!&\!&\!=  S[n, \mathrm{pp}] ,\\
+    \pdv{}{t}n_p  \ &+ \  \pdv{}{x}\left( v_x n_p \right) && =  S[n, \mathrm{pp}] ,\\
     \label{eq:ch2/hd_p2}
-    \frac{\partial}{\partial t}\left( \varepsilon_p n_p \right)   \quad &\!+\!& & \frac{\partial}{\partial x}\left( v_x \varepsilon_p n_p \right) \!\!\!&\!&\!=
+    \pdv{}{t}\left( \varepsilon_p n_p \right)   \ &+\  \pdv{}{x}\left( v_x \varepsilon_p n_p \right) && =
     \begin{aligned}[t]
         & S[\varepsilon, \mathrm{pp}] + S[\varepsilon, \mathrm{\mathrm{acc}}] \psi_\mathrm{vac} - \\
         & - S[\varepsilon, \mathrm{rad_a}] \psi_\mathrm{pl} - S[\varepsilon, \mathrm{rad_p}] \psi_\mathrm{vac} ,
     \end{aligned} \\
     \label{eq:ch2/hd_g1}
-    \frac{\partial }{\partial t}n_\gamma  \quad &\!+\!& &\frac{\partial}{\partial x}\left( \overline{v_{\gamma\parallel}} n_\gamma \right)\!\!\!&\!&\!= -S[n, \mathrm{pp}] + 2 S[n, \mathrm{rad_a}] \psi_\mathrm{pl} ,\\
+    \pdv{}{t}n_\gamma  \ &+\ \pdv{}{x}\left( \overline{v_{\gamma\parallel}} n_\gamma \right)&& = -S[n, \mathrm{pp}] + 2 S[n, \mathrm{rad_a}] \psi_\mathrm{pl} ,\\
     \label{eq:ch2/hd_g2}
-    \frac{\partial}{\partial t}\left( \overline{v_{\gamma\parallel}} n_\gamma \right) \quad &\!+\!& & \frac{\partial}{\partial x}\left( \overline{v_{\gamma\parallel}^2} n_\gamma \right) \!\!\!&\!&\!=  -S[v, \mathrm{pp}] + 2 S[v, \mathrm{rad_a}] \psi_\mathrm{pl} ,\\
+    \pdv{}{t}\left( \overline{v_{\gamma\parallel}} n_\gamma \right) \ &+\ \pdv{}{x}\left( \overline{v_{\gamma\parallel}^2} n_\gamma \right) && =  -S[v, \mathrm{pp}] + 2 S[v, \mathrm{rad_a}] \psi_\mathrm{pl} ,\\
     \label{eq:ch2/hd_g3}
-    \frac{\partial}{\partial t}\left( \varepsilon_\gamma n_\gamma \right) \quad &\!+\!& &\frac{\partial}{\partial x}\left( \overline{v_{\gamma\parallel}} \varepsilon_\gamma n_\gamma \right) \!\!\!&\!&\!= -S[\varepsilon, \mathrm{pp}] + 2 S[\varepsilon, \mathrm{rad_a}] \psi_\mathrm{pl} ,\\
+    \pdv{}{t}\left( \varepsilon_\gamma n_\gamma \right) \ &+\ \pdv{}{x}\left( \overline{v_{\gamma\parallel}} \varepsilon_\gamma n_\gamma \right) && = -S[\varepsilon, \mathrm{pp}] + 2 S[\varepsilon, \mathrm{rad_a}] \psi_\mathrm{pl} ,\\
     \label{eq:ch2/hd_e1}
-    \frac{\partial }{\partial t}\left( \frac{E^2 + B^2}{2} \right) \quad &\!+\!& &\frac{\partial}{\partial x} {\left[ \vb{E\times B} \right]}_x \!\!\!&\!&\!= - 2 S[\varepsilon, \mathrm{\mathrm{acc}}]\psi_\mathrm{vac} \equiv - \vb{jE} ,\\
-    && & \qquad\quad \frac{\partial \Sigma_\gamma}{\partial t} \!\!\!&\!&\!= 2 \int\limits_0^\infty S[\varepsilon, \mathrm{rad_p}]\psi_\mathrm{vac} dx ,
-\end{align}
+    \pdv{}{t}\left( \frac{E^2 + B^2}{2} \right) \ &+\ \pdv{}{x} \left[ \vb{E\times B} \right]_x && = - 2 S[\varepsilon, \mathrm{\mathrm{acc}}]\psi_\mathrm{vac} \equiv - \vb{jE} ,\\
+    {}& \qquad \qquad \quad \pdv{\Sigma_\gamma}{t} && = 2 \int\limits_0^\infty S[\varepsilon, \mathrm{rad_p}]\psi_\mathrm{vac} dx ,
+\end{alignat}
 где $n_p = n_{e^+} = n_{e^-}$~---~половина концентрации электрон-позитронной плазмы в предположении её квазинейтральности, $v_x$~---~средняя продольная скорость пар, рассчитываемая в подразделе~\ref{sub:ch2/sec3/fields}, $\overline{v_{\gamma\parallel}}$ и $\overline{v_{\gamma\parallel}^2}$~---~средняя величина и средний квадрат величины продольной скорости гамма-квантов.
 Последние рассчитываются из углового распределения следующим образом
 \begin{align}
@@ -361,7 +356,7 @@ PIC моделирование служит отправной точкой бо
 \subsection{Динамика $e^-e^+$ пар в вакуумной области}
 Рассмотрим электроны и позитроны, образовавшиеся в вакуумной области, где их число настолько мало, что коллективными плазменными эффектами можно пренебречь, поэтому ЭМ поле в данной области представляет собой поле падающей плоской волны. 
 Динамика единичного электрона в поле экстремально интенсивной плоской волны подробно рассмотрено в подразделе~\ref{sub:ch1/sec6/CPW} данной работы.
-Как упоминалось выше, для вычисления источников $S[\alpha, \beta]$ в правой части уравнений~\eqref{eq:ch2/hd_p1}~--~\eqref{eq:ch2/hd_e1} необходимо знание углового распределения частиц.
+Как упоминалось выше, для вычисления источников $S[\alpha, \beta]$ в правой части уравнений~\eqref{eq:ch2/hd_p1}--\eqref{eq:ch2/hd_e1} необходимо знание углового распределения частиц.
 Несмотря на то, что траектории электронов в плоской волне находятся аналитически, явное вычисление функции распределения по этим траекториям является фактически невозможным, т.к. частицы рождаются в этой области в случайные моменты времени с различными начальными условиями.
 Однако, следующие рассуждения позволяют рассчитать источники $S[\alpha, \beta]$, исходя из другого подхода.
 Во-первых, в очередной раз отметим, что релятивистски сильная плоская волна <<толкает>> частицы в направлении своего распространения, т.е. в нашем случае вдоль оси $x$.
@@ -535,44 +530,45 @@ PIC моделирование служит отправной точкой бо
 Для этого запишем уравнения Максвелла
 \begin{align}
     \label{eq:ch2/B.Maxwell1}
-    &\pdv{ E_z}{ x} = \pdv{ B_y}{ t}, \\
+    \pdv{ E_z}{ x} &= \pdv{ B_y}{ t}, \\
     \label{eq:ch2/B.Maxwell2}
-    &\pdv{ E_y}{ x} = -\pdv{ B_z}{ t}, \\
+    \pdv{ E_y}{ x} &= -\pdv{ B_z}{ t}, \\
     \label{eq:ch2/B.Maxwell3}
-    &\pdv{ B_z}{ x} = -\pdv{ E_y}{ t} - 2 n_p v_y, \\
+    \pdv{ B_z}{ x} &= -\pdv{ E_y}{ t} - 2 n_p v_y, \\
     \label{eq:ch2/B.Maxwell4}
-    &\pdv{ B_y}{ x} = \pdv{ E_z}{ t} + 2 n_p v_z.
+    \pdv{ B_y}{ x} &= \pdv{ E_z}{ t} + 2 n_p v_z.
 \end{align}
 Перейдём к следующим комплексным переменным
-\begin{align}
-    &\epsilon=E_y+iE_z, 
+\begin{gather}
+    \epsilon=E_y+iE_z, 
     \label{eps} \\
-    &\beta=B_z-iB_y, \\
-    &v_y+iv_z=\frac{\epsilon}{|\epsilon|}iv_{\perp} ,
-\end{align}
+    \beta=B_z-iB_y, \\
+    v_y+iv_z=\frac{\epsilon}{|\epsilon|}iv_{\perp} ,
+\end{gather}
 Введём также вектор-потенциал $a$ следующим образом
-\begin{equation}
-    \epsilon=-\pdv{ a}{ t} \text{, } \beta=\pdv{ a}{ x}.
-\end{equation}
+\begin{gather}
+    \epsilon=-\pdv{ a}{ t}, \\
+    \beta=\pdv{ a}{ x}.
+\end{gather}
 В новых переменных уравнения~\eqref{eq:ch2/B.Maxwell1}--\eqref{eq:ch2/B.Maxwell4} переписываются в следующем виде
 \begin{equation}
     \pdv[2]{ a}{ x}=\pdv[2]{ a}{ t}-2 n_p \pdv{ a}{ t}\left| \pdv{ a}{ t} \right|^{-1} iv_\perp.
 \end{equation}
 Будем искать решение этого уравнения в виде монохроматической плоской волны с амплитудой, зависящей от координаты $x$
 \begin{equation}
-    a=E(x)e^{i\int^{x}\kappa(x)dx-it},
+    a=E(x)\exp{i\int^{x}\kappa(x')\dd x'-it},
     \label{a}
 \end{equation}
 где $E(x)$ и $\kappa(x)$~---~действительные функции координаты $x$, имеющие смысл амплитуды и волнового числа волны.
 В итоге уравнения имеют следующий вид
-\begin{align}
+\begin{gather}
     \label{eq:ch2/B.Cushion1}
     \pdv[2]{ E}{ x}+E(1-\kappa^2)+2 n_p v_{\perp} =0, \\
     \label{eq:ch2/B.Cushion2}
     E \pdv{ \kappa}{ x} + 2\kappa \pdv{ E}{ x} = 0.
-\end{align}
+\end{gather}
 Если плазма является слабо неоднородной, то можно применить приближение ВКБ для решения данного уравнения.
-Предполагая, что масштаб неоднородности плазмы $L$ существенно превышает длину волны $\lambda$, можно пренебречь слагаемыми со второй производной: $\partial^2E/\partial x^2 \sim E/L^2 \ll \kappa^2 E = (2\pi)^2E/\lambda^2$.
+Предполагая, что масштаб неоднородности плазмы $L$ существенно превышает длину волны $\lambda$, можно пренебречь слагаемыми со второй производной: ${\partial^2E/\partial x^2 \sim E/L^2 \ll \kappa^2 E = (2\pi)^2E/\lambda^2}$.
 В таком случае имеем
 \begin{equation}
     E(1-\kappa^2)+2 n_p v_{\perp} = 0.
@@ -613,59 +609,55 @@ v_\perp = \nu \sqrt{1-v_x^2}.
 Последние оставшиеся неопределёнными величины~---~это параметры $\psi_\mathrm{vac}$ и $\psi_\mathrm{pl}$, которые разделяют в пространстве вакуумную и плазменную области.
 Отметим, что по продольной скорость пар $v_x$, определяемой согласно уравнению~\eqref{eq:ch2/vx}, можно легко различить эти области: в вакууме $v_x\approx 1$, тогда как в плазменной области $v_x < 1$.
 Поэтому можно выбрать $\psi_\mathrm{vac}$ и $\psi_\mathrm{pl}$ следующим образом
-\begin{align}
+\begin{gather}
     \psi_\mathrm{vac} = v_x^M \\
     \psi_\mathrm{pl} =  1 - v_x^M
-\end{align}
+\end{gather}
 где $M\sim 10$~---~достаточно большая константа.
 Значение данной константы подбирается исходя из некого условного порога величины $v_x$, при превышении которого можно предположить, что плазма достаточно редкая и и коллективными эффектами можно пренебречь.
 Далее будем полагать, что данный порог соответствует величине $0.7$, и $M=8$.
 
 Таким образом, уравнения, описывающие развитие КЭД каскада в плоской волне, имеют следующий окончательный вид
-\begin{align}
+\begin{alignat}{3}
     \label{eq:ch2/fin1}
-    \frac{\partial }{\partial t}n_p  +\frac{\partial}{\partial x}\left( v_x n_p \right) &= \overline{W_\mathrm{pair}} n_\gamma  ,\\
+    \pdv{}{t}n_p  &+\ \pdv{}{x}\left( v_x n_p \right) &&= \overline{W_\mathrm{pair}} n_\gamma  ,\\
     \label{eq:ch2/fin2}
-    \phantom{abs} &= 
-    \begin{multlined}[c]
-        \mathllap{\frac{\partial}{\partial t}\left( \varepsilon_p n_p \right)  + \frac{\partial}{\partial x}\left( v_p \varepsilon_p n_p \right) \quad}
-        \overline{W_\mathrm{pair}} n_\gamma \frac{\varepsilon_\gamma}{2}  + \\
-        + n_\gamma\varepsilon_\gamma  \mu \left( \overline{G_\mathrm{rad}} - \frac{\overline{I_\mathrm{vac}}}{\sqrt{\mu} E}  \right) \psi_\mathrm{vac} - \overline{I_\mathrm{pl}} n_p \psi_\mathrm{pl} ,
+    \pdv{}{t}\left( \varepsilon_p n_p \right)  &+ \pdv{}{x}\left( v_x \varepsilon_p n_p \right) &&= 
+    \begin{multlined}[t]
+        \overline{W_\mathrm{pair}} n_\gamma \frac{\varepsilon_\gamma}{2}  + \mu \overline{G_\mathrm{rad}} n_\gamma\varepsilon_\gamma \psi_\mathrm{vac} - \\
+        - \frac{\sqrt{\mu}}{E} \overline{I_\mathrm{vac}} n_\gamma\varepsilon_\gamma \psi_\mathrm{vac} - \overline{I_\mathrm{pl}} n_p \psi_\mathrm{pl} ,
     \end{multlined} \\
     \label{eq:ch2/fin3}
-    \frac{\partial }{\partial t}n_\gamma  +\frac{\partial}{\partial x}\left( \overline{v_{\gamma\parallel}} n_\gamma \right)&=-\overline{W_\mathrm{pair}} n_\gamma + 2\overline{W_\mathrm{rad}} n_p \psi_\mathrm{pl} ,\\
+    \pdv{}{t}n_\gamma  &+\ \pdv{}{x}\left( \overline{v_{\gamma\parallel}} n_\gamma \right)&&=-\overline{W_\mathrm{pair}} n_\gamma + 2\overline{W_\mathrm{rad}} n_p \psi_\mathrm{pl} ,\\
     \label{eq:ch2/fin4}
-    \frac{\partial}{\partial t}\left( \overline{v_{\gamma\parallel}} n_\gamma \right) + \frac{\partial}{\partial x}\left( \overline{v_{\gamma\parallel}^2} n_\gamma \right) &= -\overline{V_\mathrm{pair}} n_\gamma + 2 \overline{V_\mathrm{rad}} n_p \psi_\mathrm{pl} ,\\
+    \pdv{}{t}\left( \overline{v_{\gamma\parallel}} n_\gamma \right) &+\  \pdv{}{x}\left( \overline{v_{\gamma\parallel}^2} n_\gamma \right) &&= -\overline{V_\mathrm{pair}} n_\gamma + 2 \overline{V_\mathrm{rad}} n_p \psi_\mathrm{pl} ,\\
     \label{eq:ch2/fin5}
-    \frac{\partial}{\partial t}\left( \varepsilon_\gamma n_\gamma \right) +\frac{\partial}{\partial x}\left( \overline{v_{\gamma\parallel}} \varepsilon_\gamma n_\gamma \right) &=-\overline{W_\mathrm{pair}}n_\gamma\varepsilon_\gamma   +2 \overline{I_\mathrm{pl}} n_p \psi_\mathrm{pl} ,\\
+    \pdv{}{t}\left( \varepsilon_\gamma n_\gamma \right) &+\pdv{}{x}\left( \overline{v_{\gamma\parallel}} \varepsilon_\gamma n_\gamma \right) &&=-\overline{W_\mathrm{pair}}n_\gamma\varepsilon_\gamma   +2 \overline{I_\mathrm{pl}} n_p \psi_\mathrm{pl} ,\\
     \label{eq:ch2/fin6}
-    \frac{\partial }{\partial t}\left( \frac{E^2 + E^2/v_x^2}{2} \right) +\frac{\partial}{\partial x} \left( \frac{E^2}{v_x} \right) &=  -2\mu E^{2/3}\varepsilon_\gamma^{1/3}\overline{G_\mathrm{rad}} n_\gamma\psi_\mathrm{vac}  ,\\
+    \pdv{}{t}\left( \frac{E^2 + E^2/v_x^2}{2} \right) &+\ \  \pdv{}{x} \left( \frac{E^2}{v_x} \right) &&=  -2\mu \overline{G_\mathrm{rad}} n_\gamma\varepsilon_\gamma\psi_\mathrm{vac}  ,\\
     \label{eq:ch2/fin7}
-    \frac{\partial }{\partial t}\Sigma_\gamma &=  \overline{I_\mathrm{vac}} n_\gamma \psi_\mathrm{vac} .
-\end{align}
-
+    &\qquad\qquad \pdv{}{t}\Sigma_\gamma &&=  \frac{2\sqrt{\mu}}{ E} \overline{I_\mathrm{vac}} n_\gamma\varepsilon_\gamma \psi_\mathrm{vac} .
+\end{alignat}
 Отметим, что в нашей модели сохраняется полная энергия, т.е.
 \begin{equation}
     \int \left( 2n_p\varepsilon_p + n_\gamma \varepsilon_\gamma + \frac{E^2 + B^2}{2} \right) dx + \Sigma_\gamma = \text{const} .
 \end{equation}
 
-
 \subsection{Аналитические оценки}
 \label{sub:ch2/sec3/analytics}
 Перед переходом к численному решению данных уравнений и сравнению в результатами QED-PIC моделирования, сделаем некоторые очень грубые, но аналитические оценки.
-\fixme{Мы будем предполагать, что электроны и позитроны излучают гамма-кванты строго против оси $x$.
-% Эти гамма-фотоны в свою очередь с вероятностью $W_\mathrm{pair}$ могут распадаться на пары.
+Для этого будем предполагать, что электроны и позитроны излучают гамма-кванты строго против оси $x$.
 Распределение лазерной интенсивности будем считать постоянным и однородным.
-В связи с последним предположением, вероятности $W_\mathrm{pair}$ и $W_\mathrm{rad}$ также будем считать постоянными величинами.
-В таком случае уравнения непрерывности для концентрации плазмы $n_p$ и фотонов $n_\gamma$ записываются следующим образом в системе отсчёта, движущейся со скоростью $v_x$:}
+В связи с последним предположением, вероятности $\overline{W_\mathrm{pair}}$ и $\overline{W_\mathrm{rad}}$ также будем считать постоянными величинами.
+В таком случае уравнения непрерывности для концентрации плазмы $n_p$ и фотонов $n_\gamma$ записываются следующим образом в системе отсчёта, движущейся со средней скоростью плазмы $v_x$
 \begin{align}
 	\label{dnpdt}
     \pdv{n_{p}}{ t}  & =    W_\mathrm{pair}n_{\gamma}, \\
 	\label{dngdt}   
-    \pdv{ n_{\gamma}}{ t}-\pdv{ n_{\gamma}}{ x} &  =   -W_\mathrm{pair}n_{\gamma}+2W_\mathrm{rad}n_{p}
+    \pdv{ n_{\gamma}}{ t}-\pdv{ n_{\gamma}}{ x} &  =   -W_\mathrm{pair}n_{\gamma}+2W_\mathrm{rad}n_{p}.
 \end{align}
 Если пренебречь в \eqref{dngdt} слагаемым с $\partial_x$, характеризующим пространственную дисперсию, то уравнения непрерывности переходят в уравнения, описывающие КЭД каскад во вращающемся электрическом поле без пространственной динамики~\cite{bashmakov2014effect,grismayer2017seeded}.
-Уравнения~\eqref{dnpdt}--\eqref{dngdt} можно решить с помощью одностороннего преобразования Фурье \cite{LL10}, т.е. разложения решения на сумму экспонент с действительными значениями $k$ и комплексными значениями $\omega$:
+Уравнения~\eqref{dnpdt}--\eqref{dngdt} можно решить с помощью одностороннего преобразования Фурье \cite{LL10}, т.е. разложения решения на сумму экспонент с действительными значениями $k$ и комплексными значениями $\omega$
 \begin{equation}
     \label{t-x}
     n_{p,\gamma}\left(t,x\right) = \intop_{-\infty+i\sigma}^{+\infty+i\sigma}\mathrm{e}^{-i\omega t}\frac{d\omega}{2\pi}\intop_{-\infty}^{+\infty}\mathrm{e}^{ikx}n_{p,\gamma}\left(\omega,k\right)\frac{\dd k}{2\pi}.
@@ -677,53 +669,51 @@ n_{p,\gamma}\left(\omega,k\right) = \intop_{0}^{+\infty}\mathrm{e}^{i\omega t}dt
 \end{equation}
 и $\sigma$~---~такое действительное число, что контур интегрирования лежит в области аналитичности $n_{p,\gamma}$. 
 Для начальных распределений плотности плазмы и гамма-квантов равных 
-$n_{p}\left(0,x\right)$ и $n_{\gamma}\left(0,x\right)$ соответственно, решение находится следующим образом:
+$n_{p}\left(0,x\right)$ и $n_{\gamma}\left(0,x\right)$ соответственно, решение находится следующим образом
 \begin{equation}
     \label{np}
     n_{p}\left(t,x\right) = \intop_{-\infty+i\sigma}^{+\infty+i\sigma}\frac{\dd\omega}{2\pi}\intop_{-\infty}^{+\infty}\frac{\dd k}{2\pi}\intop_{-\infty}^{+\infty}dx' 
     \frac{W_\mathrm{pair}n_{p}(0,x')+i\left(\omega+k\right)n_{\gamma}(0,x')}{\Delta\left(\omega,k\right)} \mathrm{e}^{ik(x-x')-i\omega t}
 \end{equation}
 где $\Delta\left(\omega,k\right)=\omega^{2}+\omega(k + iW_\mathrm{pair})+2W_\mathrm{pair}W_\mathrm{rad}$. 
-Возмущения начального распределения распространяются вдоль характеристик, определяемых дисперсионным уравнением $\Delta\left(\omega,k\right)=0$, имеющим следующее решение: 
+Возмущения начального распределения распространяются вдоль характеристик, определяемых дисперсионным уравнением $\Delta\left(\omega,k\right)=0$, имеющим следующее решение
 \begin{equation}
     \label{dispersion}
     \omega=\frac{-k-i W_\mathrm{pair} \pm\sqrt{(k+i W_\mathrm{pair})^{2}-8 W_\mathrm{pair}W_\mathrm{rad}}}{2}. 
 \end{equation}
 Групповая скорость этих возмущений равна $v_\mathrm{gr}=\partial\mathrm{Re}[\omega]/\partial k$. 
-Анализ дисперсионного соотношения показывает, что возмущения с малыми волновыми числами ($k\ll W_\mathrm{pair}$) наиболее неустойчивы и обладают следующим инкрементом неустойчивости:
+Анализ дисперсионного соотношения показывает, что возмущения с малыми волновыми числами ($k\ll W_\mathrm{pair}$) наиболее неустойчивы и обладают следующим инкрементом неустойчивости
 \begin{equation}
     \Gamma \equiv \mathrm{Im}\left[\omega\right] =\frac{W_\mathrm{pair}}{2} \left(\sqrt{1+\frac{8 W_\mathrm{rad}}{W_\mathrm{pair}}}-1\right),
     \label{gamma}
 \end{equation}
 что совпадает с инкрементом неустойчивости КЭД каскада во вращающемся электрическом поле~\cite{bashmakov2014effect,grismayer2017seeded}. 
 Из~\eqref{dispersion} получим дисперсионное соотношение для неустойчивых возмущений:
-\begin{align}
-    \omega & \approx  \frac{\mu-1}{2}k + i\Gamma \\
-    \mu & =  \frac{1}{\sqrt{1+8 W_\mathrm{rad}/W_\mathrm{pair}}}.
+\begin{gather}
+    \omega \approx  \frac{\mu-1}{2}k + i\Gamma \\
+    \mu =  \frac{1}{\sqrt{1+8 W_\mathrm{rad}/W_\mathrm{pair}}}.
     \label{omega}
-\end{align} 
+\end{gather} 
 В пределе $a_0 \rightarrow \infty$, $W_\mathrm{rad}/W_\mathrm{pair} \approx 4$ и $\mu \approx0.17$ \cite{berestetskii1982quantum}. 
 Поэтому возмущения с малыми волновыми числами распространяются со скоростью ${v_\mathrm{gr}\approx -0.41}$.
 Это значение совпадает с результатами численного решения уравнений~\eqref{dnpdt}--\eqref{dngdt} с различными формами начальных распределений пар и гамма-квантов (см. пример такого решения на Рис.~\ref{front}).
-
-\begin{figure}[h!]
-	\includegraphics[width=165mm]{front.pdf}
-    \caption{\label{front} \fixme{Численное решение уравнений (\ref{dnpdt})--(\ref{dngdt}): (a) Распределение плотности позитронов $n_p$ (красная линия) и гамма-квантов $n_\gamma$ (оранжевая линия) в различные моменты времени. Масштаб вертикальной оси линейный для значений $[-1,1]$ и логарифмический для остальных значений. Координаты, время и плотности нормированы таким образом, что $W_\mathrm{rad}=1.0$, $W_\mathrm{pair}=0.25$.
+\begin{figure}[ht]
+	\includegraphics{front.pdf}
+    \caption[Численное решение упрощенных уравнений, описывающих развитие КЭД каскада в плоской волне]{\label{front} \fixme{Численное решение уравнений (\ref{dnpdt})--(\ref{dngdt}): (a) Распределение плотности позитронов $n_p$ (красная линия) и гамма-квантов $n_\gamma$ (оранжевая линия) в различные моменты времени. Масштаб вертикальной оси линейный для значений $[-1,1]$ и логарифмический для остальных значений. Координаты, время и плотности нормированы таким образом, что $W_\mathrm{rad}=1.0$, $W_\mathrm{pair}=0.25$.
     (b) Скорость фронта распределения плотности $n_p$, определяемая по порогу $n_p = 0.1$, как функция времени.}}
 \end{figure}
-
 В системе отсчёта, движущейся со средней продольной скоростью плазмы, скорость фронта каскада $v_\mathrm{fr}$ совпадает с найденной групповой скоростью $v_\mathrm{gr} \approx -0.41$.
 Переход в лабораторную систему отсчёта позволяет связать среднюю продольную скорость частиц плазмы и скорость фронта каскада:
 \begin{equation}
-    v_\mathrm{fr}=\frac{v_\mathrm{pl}+v_\mathrm{gr}}{1+ v_\mathrm{pl} v_\mathrm{gr} /c^2} 
+    v_\mathrm{fr}=\frac{v_x+v_\mathrm{gr}}{1+ v_x v_\mathrm{gr} /c^2} 
 \label{vcf}
 \end{equation}
-Решая это уравнение относительно $v_\mathrm{pl}$ получаем:
+Решая это уравнение относительно $v_x$ получаем:
 \begin{equation}
     \label{vpl}
-    v_\mathrm{pl}=\frac{v_\mathrm{fr}-v_\mathrm{gr}}{1-v_\mathrm{gr}v_\mathrm{fr}/c^2} 
+    v_x=\frac{v_\mathrm{fr}-v_\mathrm{gr}}{1-v_\mathrm{gr}v_\mathrm{fr}/c^2} 
 \end{equation}
-Эти рассуждения предсказывают $v_\mathrm{pl}=0.61$ для $v_\mathrm{fr} = 0.27$ ($a_{0}=2500$, см. Рис.~\ref{fig:ch2/cushion-x-t}), что достаточно близко к усреднённой скорости позитронов $\approx 0.75$, полученной из численного моделирования (см. Рис.~\ref{fig:ch2/field-structure}(b)).
+Эти рассуждения предсказывают $v_x=0.61$ для $v_\mathrm{fr} = 0.27$ ($a_{0}=2500$, см. Рис.~\ref{fig:ch2/cushion-x-t}), что достаточно близко к усреднённой скорости позитронов $\approx 0.75$, полученной из численного моделирования (см. Рис.~\ref{fig:ch2/field-structure}~(b)).
 
 \subsection{Численное решение}
 \label{sub:ch2/sec3/Numeric}
@@ -732,9 +722,9 @@ $n_{p}\left(0,x\right)$ и $n_{\gamma}\left(0,x\right)$ соответствен
 Так как метод Рунге-Кутты не является симплектическим, то сохранение энергии на каждом шаге интегрирования соблюдается путем отсечения производной $\partial n_\gamma /\partial t$ так, чтобы полная энергия не росла.
 Относительная ошибка, полученная в результате этой процедуры, оказывается приемлемо малой.
 Свободные параметры оценивались вручную путем сравнения решения с результатами трехмерного QED-PIC моделирования на основе двух макроскопических параметров: скорости фронта каскада и энергетического баланса в системе.
-После тестирования редуцированной модели выяснилось, что существует положительная корреляция между параметром $\nu$ и скоростью распространения фронта каскада.
-Параметр $\mu$ в основном определяет передачу энергии от лазера к каскадным частицам, поэтому, изменяя этот параметр, можно управлять характерным временем исчерпания энергии лазера.
-Отметим, что расчетные значения параметров подгонки практически равны друг другу для различных начальных условий (см. рис.~\ref{fig:ch2/sec3/sol2500}--\ref{fig:ch2/sec3/sol1000}).
+Тестирование модели показывает, что существует положительная корреляция между параметром $\nu$ и скоростью распространения фронта каскада.
+Параметр $\mu$ в основном определяет передачу энергии от лазера к каскадным частицам, поэтому, изменяя этот параметр, можно управлять характерным временем поглощения энергии лазера.
+Отметим, что значения свободных параметров модели, при которых наблюдается хорошее согласие с результатами моделирования, практически равны друг другу для различных начальных условий (см. рис.~\ref{fig:ch2/sec3/sol2500}--\ref{fig:ch2/sec3/sol1000}).
 
 Трехмерное QED-PIC моделирование было выполнено с использованием кода QUILL~\cite{QUILL}, который позволяет моделировать КЭД эффекты с помощью метода Монте-Карло.
 Начальное распределение ЭМ полей имеет вид плоской волны с длиной волны $\lambda=2\pi c/\omega_{L}=\SI{1}{\um}$ и амплитудой $a_0 $, распространяющееся вдоль оси $x$ с пространственно-временной огибающей, задаваемой следующим выражением
@@ -743,56 +733,58 @@ a(x,y,z) =  \cos^2 \left( \frac{ \pi }{2}   \frac{x^4}{\sigma_x^4 } \right) \cos
 \end{equation}
 Поперечный пространственный размер лазерного импульса составлял $2\sigma_r = \SI{18}{\um}$, а длительность импульса $\SI{60.5}{\femto\second}$ ($2\sigma_x = \SI{18.15}{\um}$).
 Размер области модулирования составлял $30\lambda\times 30\lambda\times 30\lambda$, количество ячеек $3000\times 300\times 300$.
-Как обсуждалось в подразделе~\ref{sub:ch2/sec2/Mechanism}, финальная стадия развития каскада КЭД в одиночном лазерном импульсе практически не зависит от затравки, поэтому мы выбираем затравку в виде короткого гамма-сгустка, распространяющегося навстречу лазерного импульса, чтобы не учитывать взаимодействие с электрон-ионной плазмой, существенно отличающейся от формирующейся электрон-позитронной плазмы.
+Как обсуждалось в подразделе~\ref{sub:ch2/sec2/Mechanism}, финальная стадия развития каскада КЭД в одиночном лазерном импульсе практически не зависит от затравки, поэтому в качестве затравки был задавался короткий гамма-сгусток, распространяющегося навстречу лазерного импульса, чтобы не учитывать взаимодействие с электрон-ионной плазмой, существенно отличающейся от формирующейся электрон-позитронной плазмы.
 Начальная затравка в таком виде в нашей модели может быть задана путём инициализации $v_{\gamma\parallel}(t=0)\approx-1$.
 Распределения плотности в нашей модели и PIC-моделировании совпадают и выражаются следующей формулой: $n_\gamma(t=0)=n_0\max\left\{0, 1 - (x-x_0)^2/w_\gamma ^2 \right\}$, где $w_\gamma$~---~полуширина сгустка, а $x_0$~---~положение его центра.
 Начальная энергия гамма-квантов была установлена равной $200 m_e c^2$.
 
-\begin{figure}
-    \includegraphics{cushion-sol-2500-new.pdf}
-    \caption[Сравнение решения модельных уравнений, описывающий развитие КЭД каскада и результатов QED-PIC моделирования для начальных параметров $a_0=2500$, $n_{\gamma,0}=0.5 a_0 n_\mathrm{cr}$]{\label{fig:ch2/sec3/sol2500} 
-    Сравнение между (a, c, e) решением уравнений~\eqref{eq:ch2/fin1}--\eqref{eq:ch2/fin6} и (b, d, f) результатами QED-PIC моделирования для начальных параметров $a_0=2500$, $n_{\gamma,0}=0.5 a_0 n_\mathrm{cr}$.
-    (a, b) Распределение концентрации гамма-квантов $n_\gamma$, плотности ЭМ энергии $(E^2+B^2)/2$ и концентрации плотности плазмы $n_p$ в различные моменты времени.
-    Вертикальная шкала является линейной в диапазоне $[0,\ 1]$ и логарифмической в диапазоне $[1,\ +\!\infty]$.
-    (c, d) Баланс энергии в системе: полная энергия $e^-e^+$ пар $\Sigma_p$, гамма-квантов $\Sigma_\gamma$ и ЭМ энергия $\Sigma_{EM}$, нормированные на полную начальную энергию системы $\Sigma_{tot}$; скорость фронта каскада $v_\mathrm{fr}$.
-    (e, f) Распределение $e^-e^+$ пар в плоскости $x$, $t$ и положение фронта каскада $x_\mathrm{fr}$. Значения свободных параметров модели: $\nu=0.32$, $\mu=10$.}
-\end{figure}
 
-Прямое сравнение между решениями уравнений ~\eqref{eq:ch2/fin1}~--~\eqref{eq:ch2/fin6} и результатами QED-PIC моделирования показано на Рис.~\ref{fig:ch2/sec3/sol2500}~--~\ref{fig:ch2/sec3/sol1000}.
+Прямое сравнение между решениями уравнений~\eqref{eq:ch2/fin1}--\eqref{eq:ch2/fin6} и результатами QED-PIC моделирования показано на Рис.~\ref{fig:ch2/sec3/sol2500}--\ref{fig:ch2/sec3/sol1000}.
 Наша модель качественно совпадает с результатами QED-PIC моделирования с точки зрения распределения частиц и электромагнитного поля, а также энергетического баланса.
 Также отчетливо различаются режимы развития каскада как в нашей модели, так и в QED-PIC моделировании.
 
-Первый режим реализуется, когда значение $a_0$ лазерного импульса недостаточно велико или гамма-сгусток недостаточно плотный.
+\begin{figure}[h!]
+    \includegraphics{cushion-sol-1000-new.pdf}
+    \caption[Сравнение решения модельных уравнений, описывающий развитие КЭД каскада и результатов QED-PIC моделирования для начальных параметров $a_0=1000$, $n_{\gamma,0}=\a_0 n_\mathrm{cr}$]{\label{fig:ch2/sec3/sol1000} 
+    Сравнение между (a, c, e) решением уравнений~\eqref{eq:ch2/fin1}--\eqref{eq:ch2/fin6} и (b, d, f) результатами QED-PIC моделирования для начальных параметров $a_0=1000$, $n_{\gamma,0}=a_0 n_\mathrm{cr}$.
+    (a, b) Распределение концентрации гамма-квантов $n_\gamma$, плотности ЭМ энергии $(E^2+B^2)/2$ и концентрации плотности плазмы $n_p$ в различные моменты времени.
+    Вертикальная шкала является линейной в диапазоне $[0,\ 1]$ и логарифмической в диапазоне $[1,\ +\!\infty]$.
+    (c, d) Баланс энергии в системе: полная энергия $e^-e^+$ пар $\Sigma_p$, гамма-квантов $\Sigma_\gamma$ и ЭМ энергия $\Sigma_{EM}$, нормированные на полную начальную энергию системы $\Sigma_{tot}$; скорость фронта каскада $v_\mathrm{fr}$.
+    (e, f) Распределение $e^-e^+$ пар в плоскости $x$, $t$ и положение фронта каскада $x_\mathrm{fr}$. Значения свободных параметров модели: $\nu=0.35$, $\mu=10$.}
+\end{figure}
+
+Первый режим (см. Рис.~\ref{fig:ch2/sec3/sol1000}) реализуется, когда значение $a_0$ лазерного импульса недостаточно велико или гамма-сгусток недостаточно плотный.
 В этом случае плотность образующейся электрон-позитронной плазмы не достигает релятивистской критической плотности, так что $v_x\approx 1$, т.е. не возникают коллективные плазменные эффекты.
 В этом случае плазменная область вообще отсутствует, а вновь рождающиеся частицы движутся в неизменном поле лазерного импульса, близком к плоской волне.
-Как обсуждалось в работах~\cite{di2012extremely, bulanov2013electromagnetic, narozhny2015quantum, mironov2017observable} (\fixme{в главе 1}), в этом случае значение параметра $\chi$ пар не растет при движении в плоской волне.
+Как обсуждалось в работах~\cite{di2012extremely, bulanov2013electromagnetic, narozhny2015quantum, mironov2017observable} и главе~1 данной работы, в этом случае значение параметра $\chi$ пар не растет при движении в плоской волне.
 Но после каждого акта испускания гамма-кванта величина $\chi$ делится между родительской и дочерней частицами, так что через несколько поколений $\chi$ всех частиц становится пренебрежимо малым и развитие каскада прекращается.
 Таким образом, при достаточно малых $a_0$ гамма-кванты гамма-сгустка распадаются на пары, оставляющие <<шлейф>> электронов и позитронов, которые ускоряются вперед и распространяются вместе с лазерным импульсом.
-Хотя плотность плазмы мала, общее количество пар может быть достаточно большим, чтобы значительная часть лазерной энергии передавалась им (см. Рис.~\ref{fig:ch2/sec3/sol1000} (c), (d) ).
+Хотя плотность плазмы мала, общее количество пар может быть достаточно большим для того, чтобы им передавалась значительная часть лазерной энергии (см. Рис.~\ref{fig:ch2/sec3/sol1000} (c), (d) ).
 Поскольку в этом режиме все частицы распространяются независимо друг от друга, фронт каскада распространяется с почти постоянной скоростью $v_\mathrm{fr}\approx -0.5$.
 
 \begin{figure}[ht]
     \includegraphics{cushion-sol-1500-new.pdf}
-    \caption[То же, что на Рис.~\ref{fig:ch2/sec3/sol2500} для начальных параметров $a_0=1500$, $n_{\gamma,0}=a_0 n_\mathrm{cr}$]{\label{fig:ch2/sec3/sol1500} 
-    То же, что на Рис.~\ref{fig:ch2/sec3/sol2500} для начальных параметров $a_0=1500$, $n_{\gamma,0}=a_0 n_\mathrm{cr}$. Значения свободных параметров модели: $\nu=0.35$, $\mu=10$.}
+    \caption[То же, что на Рис.~\ref{fig:ch2/sec3/sol1000} для начальных параметров $a_0=1500$, $n_{\gamma,0}=a_0 n_\mathrm{cr}$]{\label{fig:ch2/sec3/sol1500} 
+    То же, что на Рис.~\ref{fig:ch2/sec3/sol1000} для начальных параметров $a_0=1500$, $n_{\gamma,0}=a_0 n_\mathrm{cr}$. Значения свободных параметров модели: $\nu=0.35$, $\mu=10$.}
 \end{figure}
 
-% The first regime is observed when $a_0$ of the laser pulse is not big enough or the gamma-bunch is not dense enough. In that case the density of the produced electron-positron plasma does not reach the relativistic critical density so that $v_x\approx 1$, i.e. the collective plasma effects do not occur. In this case the plasma region is not present at all and the newly born particles move in the unaltered field of the laser pulse which is close to the plane wave. As discussed in~\cite{DiPiazza2012, bulanov2013electromagnetic, narozhny2015quantum, mironov2017observable} in that case $\chi$ of the pairs does not grow during its motion in the plane wave. But after each act of the gamma-quant emission it splits between the parent and the child particles so after few generations $\chi$ of all the particles becomes negligibly small so the cascading ceases. Thus for small enough $a_0$ the gamma-quanta of the gamma-bunch decay into pairs levaing the `trail' of the electrons and positrons which are accelerated forwards and co-propagate with the laser pulse. Although the density of the plasma is small the total number of the pairs can be big enough so that the significant portion of the laser energy is transferred to them [see Fig.~\ref{fig:ch2/sec3/sol1000} (c), (d)]. Because in this regime all the particles propagate independently to each other the cascade front propagates with almost constant velocity $v_\mathrm{fr}\approx -0.5$.
-
-Во втором режиме каскад развивается, как обсуждалось в подразделе~\ref{sub:ch2/sec2/Mechanism}.
+Во втором режиме (см. Рис.~\ref{fig:ch2/sec3/sol2500}) каскад развивается, как обсуждалось в подразделе~\ref{sub:ch2/sec2/Mechanism}.
 Пик плотности пар распространяется в сторону лазера со значительно меньшей скоростью (относительно переднего фронта лазерного импульса), чем в первом режиме.
 При этом плотность плазмы растет во времени в отличие от первого режима, когда плотность плазмы в каждой точке остается практически неизменной после прохождения этой точки начальным гамма-сгустком.
-Как упоминалось в п.~\ref{sub.Pairs}, плотная электрон-позитронная плазма фактически почти не поглощает лазерное поле, поэтому, несмотря на то, что в этом режиме общее число пар значительно больше, чем в первом скорости передачи энергии от ЭМ поля к парам близки друг к другу в обоих режимах.
-
-% In the second regime the cascade develops as discussed in Sec.~\ref{sec.Introduction}. The peak of the pairs density propagates towards the laser with a much slower velocity (relative to the leading edge of the laser pulse) than in the first regime. Moreover the density of the plasma grows in time in contrast to the first regime where the plasma density at each point stays almost the same after the initial gamma-bunch passes that point. As mentioned in Sec.~\ref{sub.Pairs} the dense electron-positron plasma actually almost does not absorb the laser field that is why despite the fact that in this regime the total number of the pairs is much larger than in the first regime, the rates of the energy transfer from the EM field to the pairs are close to each other in both regimes.
+Как указывалось в п.~\ref{sub.Pairs}, плотная электрон-позитронная плазма практически не поглощает лазерное поле, поэтому, несмотря на то, что в этом режиме общее число пар значительно больше, чем в первом, скорости передачи энергии от ЭМ поля к парам близки друг к другу в обоих режимах.
 
 \begin{figure}[ht]
-    \includegraphics{cushion-sol-1000-new.pdf}
-    \caption[То же, что на Рис.~\ref{fig:ch2/sec3/sol2500} для начальных параметров $a_0=1000$, $n_{\gamma,0}=a_0 n_\mathrm{cr}$]{\label{fig:ch2/sec3/sol1000} 
-    То же, что на Рис.~\ref{fig:ch2/sec3/sol2500} для начальных параметров $a_0=1000$, $n_{\gamma,0}=a_0 n_\mathrm{cr}$. Значения свободных параметров модели: $\nu=0.35$, $\mu=10$.}
+    \includegraphics{cushion-sol-2500-new.pdf}
+    \caption[То же, что на Рис.~\ref{fig:ch2/sec3/sol1000} для начальных параметров $a_0=2500$, $n_{\gamma,0}=0.5a_0 n_\mathrm{cr}$]{\label{fig:ch2/sec3/sol2500} 
+    То же, что на Рис.~\ref{fig:ch2/sec3/sol1000} для начальных параметров $a_0=2500$, $n_{\gamma,0}=0.5a_0 n_\mathrm{cr}$. Значения свободных параметров модели: $\nu=0.32$, $\mu=10$.}
 \end{figure}
+% \begin{figure}[ht]
+%     \includegraphics{cushion-sol-1000-new.pdf}
+%     \caption[То же, что на Рис.~\ref{fig:ch2/sec3/sol2500} для начальных параметров $a_0=1000$, $n_{\gamma,0}=a_0 n_\mathrm{cr}$]{\label{fig:ch2/sec3/sol1000} 
+%     То же, что на Рис.~\ref{fig:ch2/sec3/sol2500} для начальных параметров $a_0=1000$, $n_{\gamma,0}=a_0 n_\mathrm{cr}$. Значения свободных параметров модели: $\nu=0.35$, $\mu=10$.}
+% \end{figure}
 
-Если $a_0$ лежит между значениями, при которых наблюдается либо первый, либо второй режим, то на начальном этапе каскад напоминает каскад S-типа, на что явно указывает отрицательное значение скорости фронта каскада (см. синюю пунктирную линию на Рис.~\ref{fig:ch2/sec3/sol1500} (c), (d)). 
+Если $a_0$ лежит между значениями, при которых наблюдается либо первый, либо второй режим (см. Рис.~\ref{fig:ch2/sec3/sol1500}), то на начальном этапе каскад напоминает каскад S-типа, на что явно указывает отрицательное значение скорости фронта каскада (см. синюю пунктирную линию на Рис.~\ref{fig:ch2/sec3/sol1500} (c), (d)). 
 В какой-то момент плотность пар становится достаточно большой, чтобы изменить распространение лазера и каскад переходит в режим самоподдержания.
 На смену этих двух режимов указывает резкое изменение скорости фронта каскада.
 Начальная стадия (стадия каскада S-типа) просматривается и при больших значениях $a_0$ (см. рис.~\ref{fig:ch2/sec3/sol2500}), однако она значительно короче и слабо выражена в результатах QED-PIC моделирования.
@@ -801,7 +793,7 @@ a(x,y,z) =  \cos^2 \left( \frac{ \pi }{2}   \frac{x^4}{\sigma_x^4 } \right) \cos
 
 \fixme{Мы также проверили разработанную выше грубую аналитическую оценку, из которой была получена связь между средней продольной скоростью частиц каскада и скоростью фронта каскада.}
 Это предсказание модели, рассчитанное на основе средней скорости частиц каскада, примерно совпадает с реальной скоростью, наблюдаемой в модельном решении (см. Рис.~\ref{fig.former}) на стадии самоподдержания каскада.
-Поскольку этот этап никогда не начинается при $a_0 = 1000$, эта упрощенная модель не может быть применена в этом случае.
+Поскольку, как отмечено выше, эта стадия никогда не начинается в моделировании при $a_0 = 1000$, эта упрощенная модель не может быть применена в этом случае.
 
 % We also verified the results of the simplified model developed by us in Ref.~\cite{Samsonov2019} from which a relation between the mean longitudinal velocity of the cascade particles and the cascade front velocity was obtained. This model prediction calculated based on the mean velocity of the cascade particles roughly coinsides with the actual velocity observed in the model solution (see Fig.~\ref{fig.former}) at the stage of the cascade self sustenance. As this stage never starts for $a_0 = 1000$, this simplified model cannot be applied in that case.
 
@@ -833,33 +825,21 @@ a(x,y,z) =  \cos^2 \left( \frac{ \pi }{2}   \frac{x^4}{\sigma_x^4 } \right) \cos
 
 Таким образом, мы показали, что самоподдерживающийся КЭД каскад может развиваться в плоской волне, вопреки достаточно распространённому мнению, что такая конфигурация поля является неподходящей для наблюдения КЭД каскадов~\cite{narozhny2015quantum,mironov2017observable,bulanov2013electromagnetic}.
 Однако, для наблюдения такого эффекта требуется достаточно плотная затравка, способная влиять на распространение этой плоской волны.
-Важно отметить, что при этом наличие отражения падающей волны не является принципиальным, поэтому КЭД каскад в одиночной плоской волне принципиально отличается от такового, например, в стоячей волне, который достаточно активно исследуется в силу наличия аналитических оценок и достаточно низкого порога наблюдения.
-
-Развитие КЭД каскада приводит к эффективному преобразованию падающих оптических фотонов в жёсткие фотоны и электронно-позитронные пары, при этом начальная затравка движется почти со скоростью света.
-Таким образом, образуется электрон-позитронная <<подушка>>, фронт которой (граница вакуум-плазма) движется медленнее затравки из-за непрерывного образования электрон-позитронной плазмы.
-Подобно волнам ионизации в физике газового разряда~\cite{bollen1983high,semenov1982breakdown}, распространение фронта КЭД каскада можно рассматривать как ударную волну <<пробоя вакуума>>.
-Плотность плазмы подушки в конце концов превышает релятивистскую критическую плотность, и плазма экранирует затравочные частицы от падающей волны.
-Инкремент роста числа частиц при развитии каскада в поле двух встречных электромагнитных волн с круговой поляризацией рассчитан численно в публикации~\cite{grismayer2017seeded} как функция $a_0$.
-Пороговое значение $a_0$ можно оценить из условия удвоения числа частиц в течение лазерного периода.
-Для длины волны $\SI{1}{\um}$ пороговое значение $a_0$ составляет около $10^3$.
-Из наших расчетов следует, что в плоской волне, порог развития КЭД каскада соответствует примерно величине $a_0 \sim 1500$, что несколько выше порога развития каскада в стоячей волне, но всё ещё значительно ниже критического поля Заутера-Швингера $a_0 \simeq m c^2/ \hbar \omega_\mathrm{L} \simeq 4 \times 10^5 $~\cite{Sauter31, Schwinger51}.
-Из наших расчетов следует, что пороговая интенсивность падающей волны составляет около $6 \times 10^{24}$~Вт/см$^2$ для длины волны $\SI{1}{\um}$.
-Как указывалось выше пороговая интенсивность для вакуумного пробоя может быть достигнута с помощью будущих лазерных установок, хотя и за счёт использования достаточно острой фокусировки излучения.
-Тем не менее выводы данной работы могут быть важны для их приложений.
-Возникновение волны пробоя вакуума и последующее поглощение лазерного излучения расширяют ограничения достижимой лазерной интенсивности~\cite{Bell2008, fedotov2010limitations} на случай слабой фокусировки.
-Интересной особенностью такого каскада является то, что скорость его фронта, или, другими словами, скорость границы раздела вакуум-плазма, может быть значительно меньше скорости света и почти не зависит от времени.
-При этом величина этой скорости фронта уменьшается с увеличением амплитуды падающей волны.
-Полученные результаты аналогичны для затравки в виде слоя как электрон-ионной так и электрон-позитронной плазмы.
-Независимость (до определённой степени) процесса развития КЭД каскада от затравки также указывает на реализацию самоподдерживающегося режима.
+Развитие КЭД каскада приводит к образованию плотной электрон-позитронная <<подушки>>, фронт которой движется существенно медленнее скорости света, и которая приводит к эффективному поглощению лазерного излучения.
+По аналогии с волнами ионизации в физике газового разряда~\cite{bollen1983high,semenov1982breakdown}, распространение фронта КЭД каскада можно рассматривать как волну <<пробоя вакуума>>.
+Важно отметить, что для развития такого КЭД каскада наличие отражённой волны не является принципиальным, что делает его существенно отличным от КЭД каскада в стоячей волне, который достаточно активно исследуется в силу достаточной простой конфигурации поля.
+Так, пороговое значение амплитуды волны $a_0$, необходимое для развития КЭД каскада в стоячей волне, было рассчитано численно в публикации~\cite{grismayer2017seeded}, исходя из условия удвоения числа частиц за один лазерный период, и при длине волны $\SI{1}{\um}$ составило около $10^3$.
+Из наших расчетов следует, что порог развития КЭД каскада в плоской волне соответствует примерно величине $a_0 \sim 1500$, что несколько выше порога развития каскада в стоячей волне, но всё ещё значительно ниже критического поля Заутера-Швингера $a_S = m c^2/ \hbar \omega_\mathrm{L} \simeq \num{4e5}$~\cite{Sauter31, Schwinger51}.
+Величина $a_0 = 1500$ соответствует интенсивности около $\SI{6e24}{\watt/\centi\meter^2}$ при длине волны $\SI{1}{\um}$, которая, как указывалось выше, потенциально может быть достигнута с помощью лазерных установок нового поколения, хотя и за счёт использования достаточно острой фокусировки излучения.
+Тем не менее, возникновение волны пробоя вакуума и последующее поглощение лазерного излучения может рассматриваться как ещё одно из фундаментальных ограничений на достижимую интенсивность лазерного излучения, впервые исследованных в публикациях~\cite{Bell2008, fedotov2010limitations}, на случай слабой фокусировки.
 
 Также нами была разработана аналитическая самосогласованная модель развития такого КЭД каскада.
 Полное описание этого взаимодействия требует решения уравнений Максвелла вместе с кинетическими уравнениями для электронов, позитронов и гамма-фотонов.
-Эта система уравнений слишком сложна для аналитических методов и обычно решается численно с помощью, например, QED-PIC кодов, требующих много вычислительных ресурсов.
-Чтобы получить редуцированные уравнения для вычислительно легкой модели, был сделан ряд предположений, основные из которых заключаются в переходе к квазиодномерному гидродинамическому описанию; использованию локально-квазимоноэнергетических функций распределения частиц и приближения плоской волны для лазерного излучения.
-Полученная упрощенная система уравнений записывается в замкнутом виде и решается численно.
+Эта система уравнений слишком сложна для аналитического анализа и обычно решается численно с помощью, например, QED-PIC кодов, требующих много вычислительных ресурсов.
+Чтобы получить редуцированные уравнения для вычислительно легкой модели, был сделан ряд предположений, основные из которых заключаются в переходе к квазиодномерному гидродинамическому описанию, использованию локально-квазимоноэнергетических функций распределения частиц и приближения плоской волны для лазерного излучения.
+Полученная упрощенная система уравнений записывается в замкнутом виде и также решается численно.
 Несмотря на сложность и нелинейность динамики каскада, оказалось, что относительно простая одномерная модель позволяет качественно предсказать его развитие, например, макроскопическое пространственно-временное распределение частиц и энергетический баланс в системе.
 Этот факт служит обоснованием аналитического обоснования модели и, следовательно, нашего понимания процесса.
-% Хотя есть несколько расхождений между предсказаниями нашей модели и результатами QED-PIC моделирования, нами определены причины, лежащие в их основе, и для некоторых предложены методы их устранения.
 Методы, используемые для разработки данной модели, вероятно могут быть применены для построения схожих моделей, описывающих астрофизические явления, такие как развитие КЭД каскадов в магнитосферах нейтронных звезд, также отличающихся сложной пространственно-временной динамикой и сопровождающихся генерацией волн пробоя вакуума~\cite{timokhin2010time}.
 
 Основные полученные в данной главе результаты опубликованы в работах~\cite{samsonov2019laser, samsonov2021hydrodynamical, samsonov2021effect, samsonov2018NW, samsonov2019FNP, samsonov2020NW, samsonov2020UFL, samsonov2021UFL}
